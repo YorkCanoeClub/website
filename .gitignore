@@ -1,8 +1,8 @@
 .htaccess
+!*/.htaccess
 Settings-Local.php
 attachements/*
 !attachments/index.php
-!attachments/.htaccess
 cache/data*.php
 ffcache/data*.php
 Packages/backups/*
