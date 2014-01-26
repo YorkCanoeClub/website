@@ -1,0 +1,131 @@
+<?php
+/**********************************************************************************
+* ForumFirewall.english.php - PHP language file for ForumFirewall mod
+* Version 1.1.5 by JMiller a/k/a butchs
+* (http://www.eastcoastrollingthunder.com) 
+*********************************************************************************
+* This program is distributed in the hope that it is and will be useful, but
+* WITHOUT ANY WARRANTIES; without even any implied warranty of MERCHANTABILITY
+* or FITNESS FOR A PARTICULAR PURPOSE.
+**********************************************************************************/
+
+$txt['forumfirewall_cversion_mod'] = '1.1.5';
+$txt['forumfirewall'] = 'Forum Firewall';
+$txt['forumfirewall_config'] = 'Registro de visitantes';
+$txt['forumfirewall_admin'] = 'Administrar Forum Firewall';
+$txt['forumfirewall_general'] = 'Configuraci&oacute;n General';
+$txt['forumfirewall_admin_desc'] = 'Configurar y Gestionar';
+$txt['forumfirewall_settings_title'] = 'Configuraci&oacute;n';
+$txt['forumfirewall_settings_desc'] = 'Esta p&aacute;gina permite cambiar la configuraci&oacute;n b&aacute;sica de Forum Firewall. Tenga mucho cuidado con esta configuraci&oacute;n, ya que puede provocar un mal funcionamiento del Foro.';
+$txt['forumfirewall_reports_desc'] = 'Examinar registros Firewall de visitantes';
+$txt['forumfirewall_about_title'] = 'Acerca de';
+$txt['forumfirewall_about_desc'] = 'Acerca de Forum Firewall';
+$txt['forumfirewall_version_c'] = 'Versi&oacute;n/Cr&eacute;ditos';
+$txt['forumfirewall_cversion'] = 'Versi&oacute;n';
+$txt['forumfirewall_cache_duration'] = 'Duraci&oacute;n Cach&eacute;';
+$txt['forumfirewall_salt'] = 'Salt &uacute;nico';
+$txt['forumfirewall_sql_reason'] = 'Repetido';
+$txt['forumfirewall_reason0'] = 'Caracteres no permitidos';
+$txt['forumfirewall_reason1'] = ' en lista Proxy';
+$txt['forumfirewall_reason2'] = ' en Proxy oculto';
+$txt['forumfirewall_settings_sub'] = 'Configuraci&oacute;n';
+$txt['forumfirewall_enable'] = 'Activar Forum Firewall';
+$txt['forumfirewall_enable_dos'] = 'Ataque DOS';
+$txt['forumfirewall_enable_inj'] = 'Activar Test de Inyecci&oacute;n';
+$txt['forumfirewall_enable_xxs'] = 'Activar Inspecci&oacute;n XSS';
+$txt['forumfirewall_enable_header'] = 'Activar Inspecci&oacute;n de Header';
+$txt['forumfirewall_enable_country'] = 'Activar Test de Pa&iacute;s';
+$txt['forumfirewall_in_geoip'] = 'GeoIP';
+$txt['forumfirewall_enable_bypass'] = 'Activar Protecci&oacute;n Bypass';
+$txt['forumfirewall_ip'] = 'Direcci&oacute;n IP';
+$txt['forumfirewall_ip_title'] = 'Direcci&oacute;n IP';
+$txt['forumfirewall_robots_title'] = 'Robots.txt';
+$txt['forumfirewall_enable_robots'] = 'Habilita Validaci&oacute;n en Robots.txt';
+$txt['forumfirewall_test_robots'] = 'Robots a comprobar';
+$txt['forumfirewall_robotstxt_action'] = 'Accion\'es en Robots.txt';
+$txt['forumfirewall_port_title'] = 'Puertos';
+$txt['forumfirewall_enable_rmtport'] = 'Activar Validaci&oacute;n de Puerto Remoto';
+$txt['forumfirewall_enable_svrport'] = 'Activar Validaci&oacute;n de Puerto de Servidor';
+$txt['forumfirewall_good_ser_ports'] = 'Lista de Puertos de Servidor';
+$txt['forumfirewall_enable_check_ip'] = 'Activar Validaci&oacute;n IP';
+$txt['forumfirewall_enable_proxy'] = 'Revisar Lista Proxy';
+$txt['forumfirewall_enable_block'] = 'Bloquear Infracciones';
+$txt['forumfirewall_bypass'] = 'Informaci&oacute;n de Proxy';
+$txt['forumfirewall_domain'] = 'Nombre de Dominio';
+$txt['forumfirewall_logging'] = 'Registro';
+$txt['forumfirewall_mauthor'] = 'Autor: <a href="http://www.eastcoastrollingthunder.com/">butchs</a>';
+$txt['forumfirewall_empty'] = 'No hay registros en ese rango';
+$txt['forumfirewall_log_title'] = 'Informes';
+$txt['forumfirewall_event_title'] = 'Detalles evento';
+$txt['forumfirewall_log_id'] = 'ID';
+$txt['forumfirewall_log_ip'] = 'IP';
+$txt['forumfirewall_log_date'] = 'FECHA';
+$txt['forumfirewall_log_headers'] = 'HEADER';
+$txt['forumfirewall_log_result'] = 'RAZ&Oacute;N';
+$txt['forumfirewall_report_denied_title'] = 'Visitantes';
+$txt['forumfirewall_rec_disp'] = 'Mostrar registro(s)';
+$txt['forumfirewall_to'] = ' a ';
+$txt['forumfirewall_from'] = 'de ';
+$txt['forumfirewall_rec_tot'] = ' total ';
+$txt['forumfirewall_type_den'] = '(Registros visitantes).';
+$txt['forumfirewall_colin'] = ': ';
+$txt['forumfirewall_injection'] = 'Inyecci&oacute;n SQL';
+$txt['forumfirewall_cookie'] = 'Cross-Site Scripting';
+$txt['forumfirewall_header'] = 'Ataque HTTP Header';
+$txt['forumfirewall_country'] = 'Identificaci&oacute;n de pa&iacute;s';
+$txt['forumfirewall_uri_chars'] = 'Caracteres URI permitidos';
+$txt['forumfirewall_exploits'] = 'Lista Inyecci&oacute;n';
+$txt['forumfirewall_xxs'] = 'Eventos XSS';
+$txt['forumfirewall_referer_attack'] = 'Ataque Referrer';
+$txt['forumfirewall_ua_attack'] = 'Ataque User-Agent';
+$txt['forumfirewall_entity_attack'] = 'Ataque Request Entity';
+$txt['forumfirewall_bad_countries'] = 'Pa&iacute;s';
+$txt['forumfirewall_real_ip'] = 'IP visitante llama a Proxy';
+$txt['forumfirewall_header_id'] = 'Proxy Header ID';
+$txt['forumfirewall_country_id'] = 'C&oacute;digo pa&iacute;s v&iacute;a Headers';
+$txt['forumfirewall_enable_email'] = 'Notificar al Administrador';
+$txt['forumfirewall_dos_attack'] = 'Ataque DOS';
+$txt['forumfirewall_enable_ua'] = 'Inspecci&oacute;n User-Agent.';
+$txt['forumfirewall_email_diabled_0'] = 'Nunca';
+$txt['forumfirewall_email_ddos_1'] = 'Enviar correo solamente en intentos DOS';
+$txt['forumfirewall_email_all_2'] = 'Enviar correo por cada entrada de registro';
+$txt['forumfirewall_trigger'] = 'Trigger (#/seg)';
+$txt['forumfirewall_never_0'] = 'Nunca';
+$txt['forumfirewall_1hr_1'] = '1 Hora';
+$txt['forumfirewall_24hr_2'] = '24 Horas';
+$txt['forumfirewall_1wk_3'] = '1 Semana';
+$txt['forumfirewall_permanent_4'] = 'Permanente';
+$txt['forumfirewall_good_ua'] = 'User-Agent Autorizados';
+$txt['forumfirewall_longterm_ban'] = 'Periodo Ban';
+$txt['forumfirewall_enable_admin'] = 'Activar Confirmaci&oacute;n IP Administrador';
+$txt['forumfirewall_admin_ip_lo'] = 'IP baja Administrador';
+$txt['forumfirewall_admin_ip_hi'] = 'IP alta Administrador';
+$txt['forumfirewall_admin_domain'] = 'Nombre de Dominio Administrador';
+$txt['forumfirewall_theadmin'] = 'el ADMIN';
+$txt['forumfirewall_nospam'] = '~n0spam[at]n0spam~';
+$txt['forumfirewall_dot'] = '~[d0t]~';
+$txt['forumfirewall_dash'] = '~[da5h]~';
+$txt['forumfirewall_mailto'] = 'mailto:';
+$txt['result0'] = '!';
+$txt['result1'] = 'Intento Bypass!';
+$txt['result2'] = 'Hack:  ';
+$txt['result3'] = 'Ataque DOS!';
+$txt['result4'] = 'IP no v&aacute;lida';
+$txt['result5'] = 'Pa&iacute;s no autorizado: ';
+$txt['result6'] = 'Cookie nociva: ';
+$txt['result7'] = 'User-Agent perjudicial!';
+$txt['result8'] = 'IP Admin no v&aacute;lida:  ';
+$txt['result9'] = 'Ataque Referrer:  ';
+$txt['result10'] = 'Ataque User-Agent:  ';
+$txt['result11'] = 'Acceso a Puerto no v&aacute;lido: ';
+$txt['result13'] = 'Ataque Request Entity:  ';
+$txt['result14'] = 'Ataque Robot!';
+$txt['result2a'] = 'Intento de Hacking bloqueado!';
+$txt['forumfirewall_block'] = ' Mod de SMF ha bloqueado a un visitante!';
+$txt['forumfirewall_for'] = ' para ';
+$txt['forumfirewall_register_globals'] = 'Riesgo de Seguridad:  register_globals activado!';
+$txt['forumfirewall_magic_quotes'] = 'Riesgo de Seguridad:  magic_quotes activado!';
+$txt['result6a'] = 'Sus cookies para este sitio est&aacute;n infectadas!  Por favor, b&oacute;rrelas y regrese!';
+$txt['forumfirewall_msupport'] = 'Para apoyar al autor del Mod e inspirar futuras actualizaciones y mejoras.<br /><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=UJTMMF8FKGLZ6&lc=US&item_name=butchs%2f%20continued%20updates&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"><img src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif"></a><br /><br />Informaci&oacute;n de Copyright y enlace deben mantenerse intactos!  Solamente se pueden retirar con la aprobaci&oacute;n del Autor/Creadores o realizando una donaci&oacute;n de $10 USD o m&aacute;s al Autor/Creador.';
+$txt['forumfirewall_oview'] = 'Forum Firewall ofrece 13 chequeos para la gesti&oacute;n avanzada del foro que protegen contra los intentos de pirateo (hacking). Forum Firewall es un suplemento a los m&eacute;todos existentes contra el pirateo y no debe ser la &uacute;nica l&iacute;nea de protecci&oacute;n. Un esquema de protecci&oacute;n de ejemplo puede ser el siguiente::<ul type="circle"><li>Proxy Firewall.</li><li>Protecci&oacute;n htaccess para bloquear direcciones ip no deseadas, CrawlProtect y GeoIP.</li><li>Mod Forum Firewall.</li><li>Mod Bad Behavior.</li><li>Project Honeypot.</li><li>Mod Stop Spammer.</li></ul><br />Esta protecci&oacute;n no detendr&aacute; a un hacker determinado pero puede llevarle a buscar objetivos m&aacute;s f&aacute;ciles.<br /><hr /><br />Algunas de las caracter&iacute;sticas de este mod son:<ol type="a"><li>Compatible con CloudFlare y otros Proxies.</li><li>Comprueba el estado de register globals y magic quotes.</li><li>Permite registros o bloquea infracciones.</li><li>Detecta y descodifica autom&aacute;ticamente utf8 para el examen.</li><li>Protege contra pirateo de cookie del admin.</li><li>Protege contra la suplantaci&oacute;n de ip del admin.</li><li>Enviar&aacute; un correo electr&oacute;nico al administrador nunca, en intentos DOS o en cada infracci&oacute;n.</li><li>Cifrado de cach&eacute; incorporado. Se recomienda utilizar esta funci&oacute;n ya que Forum Firewall utiliza la cach&eacute; para determinar si se trata de una infracci&oacute;n DOS. El m&iacute;nimo definido es de 20 segundos.</li><li>Protecci&oacute;n DOS. Observa User-Agent y si est&aacute; bloqueado no se le permitir&aacute; el acceso.  Adem&aacute;s, hay una funci&oacute;n donde se observa a que velocidad (hits por segundo) el visitante rastrea el sitio y lo compara con una lista blanca y luego prohibe o marca al visitante en funci&oacute;n de esta configuraci&oacute;n. Incluye la posibilidad de prohibir (ban) usando el sistema de prohibiciones de SMF.</li><li>Validaci&oacute;n de direcciones IP.</li><li> - Comprueba todas las direcciones IP en la lista IP Proxy de visitantes.</li><li>Protecci&oacute;n Cross Site Scripting. El Mod observa las cookies locales del usuario entrante para detectar ataques Cross-Site Scripting. Hay un an&aacute;lisis autom&aacute;tico en Tareas Programadas que inspecciona los archivos de imagen adjuntos, iconos gestuales (smilies) y carpetas de imagen de la plantilla una vez por semana para comprobar infecciones. Esta &uacute;ltima caracter&iacute;stica proporciona s&oacute;lo un mensaje de advertencia. Si tiene infecciones las posibilidades de haberse extendido son mayores de lo que piensa y deben comprobarse tambi&eacute;n los archivos php.</li><li>Protecci&oacute;n contra ataques HTTP Header - El Mod inspecciona el tr&aacute;fico entrante de Entity, Referrer y User-Agent para intentos de pirateo.</li><li>Protecci&oacute;n Suplantaci&oacute;n de Puerto.</li><li>Inyecci&oacute;n SQL. Todos los URI son inspeccionados para detectar signos de caracteres uri no permitidos e intentos de inyecci&oacute;n SQL.</li><li>C&oacute;digos de pa&iacute;s. Esta funci&oacute;n es limitada. Funcionar&aacute; con servidores basados en GeoIP y CloudFlare.</li><li>Interfaz Proxy. Comprobar&aacute; la direcci&oacute;n ip de los visitantes con la configuraci&oacute;n del proxy para evitar intentos bypass. Esto s&oacute;lo funciona con una direcci&oacute;n ip est&aacute;tica.</li></ol>';
+?>

@@ -1,0 +1,3 @@
+[03-Dec-2012 11:36:14] PHP Parse error:  syntax error, unexpected '.' in /home/yorkcano/public_html/Themes/default/ycc/CommitteeEmergencyContacts.template.php on line 56
+[05-Sep-2013 16:31:21] PHP Parse error:  syntax error, unexpected '}' in /home/yorkcano/public_html/Themes/default/ycc/CommitteeWaitingDetail.template.php on line 221
+[16-Dec-2013 17:11:51] PHP Parse error:  syntax error, unexpected T_STRING in /home/yorkcano/public_html/Themes/default/ycc/CommitteeWaitingDetail.template.php on line 58
