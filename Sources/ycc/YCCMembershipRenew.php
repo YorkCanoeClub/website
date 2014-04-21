@@ -2,8 +2,14 @@
 if (!defined('SMF'))
 die('Hacking attempt...');
 
-require_once("/home/yorkcano/public_html/helper/functions.php");
-require_once("/home/yorkcano/public_html/libraries/PHPMailer/class.phpmailer.php");
+require_once(dirname(__FILE__) . '/../../Settings.php');
+
+global $db_persist, $db_connection, $db_server, $db_user, $db_passwd;
+global $db_type, $db_name, $ssi_db_user, $ssi_db_passwd, $sourcedir, $db_prefix;
+global $boarddir;
+
+require_once($boarddir."/helper/functions.php");
+require_once($boarddir."/libraries/PHPMailer/class.phpmailer.php");
     
 function YCCMembershipRenew() {
 
@@ -11,10 +17,8 @@ function YCCMembershipRenew() {
 
     isAllowedTo(array('view_ownylist'));
     
-    $memberDB = array("localhost", "yorkcano_web", "web", "yorkcano_smf");
-
-    $memberConnection = mysql_connect($memberDB[0], $memberDB[1], $memberDB[2], true) or die("Could not connect: " . mysql_error());
-    mysql_select_db($memberDB[3], $memberConnection) or die ('Cannot Connect to DB: ' . mysql_error());
+    $memberConnection = mysql_connect($db_server, $db_user, $db_passwd, true) or die("Could not connect: " . mysql_error());
+    mysql_select_db($db_name, $memberConnection) or die ('Cannot Connect to DB: ' . mysql_error());
 
     $count = intval($_REQUEST["count"], 10);
     $membersIn = Array();
@@ -105,10 +109,8 @@ function YCCMembershipRenewSubmit() {
 
     isAllowedTo(array('view_ownylist'));
     
-    $memberDB = array("localhost", "yorkcano_web", "web", "yorkcano_smf");
-
-    $memberConnection = mysql_connect($memberDB[0], $memberDB[1], $memberDB[2], true) or die("Could not connect: " . mysql_error());
-    mysql_select_db($memberDB[3], $memberConnection) or die ('Cannot Connect to DB: ' . mysql_error());
+    $memberConnection = mysql_connect($db_server, $db_user, $db_passwd, true) or die("Could not connect: " . mysql_error());
+    mysql_select_db($db_name, $memberConnection) or die ('Cannot Connect to DB: ' . mysql_error());
 
     $count = intval($_REQUEST["count"], 10);
     $membersIn = Array();

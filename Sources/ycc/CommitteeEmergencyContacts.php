@@ -2,7 +2,13 @@
 if (!defined("SMF"))
 die("Hacking attempt...");
 
-require_once("/home/yorkcano/public_html/helper/functions.php");
+require_once(dirname(__FILE__) . '/../../Settings.php');
+
+global $db_persist, $db_connection, $db_server, $db_user, $db_passwd;
+global $db_type, $db_name, $ssi_db_user, $ssi_db_passwd, $sourcedir, $db_prefix;
+global $boarddir;
+
+require_once($boarddir."/helper/functions.php");
 
 function CommitteeEmergencyContacts() {
 
@@ -11,10 +17,8 @@ function CommitteeEmergencyContacts() {
     isAllowedTo(array("committee"));
     $manager = allowedTo("committee_manage");
     
-    $extraDb = array("localhost", "yorkcano_web", "web", "yorkcano_smf");
-
-    $extraConnection = mysql_connect($extraDb[0], $extraDb[1], $extraDb[2], true) or die("Could not connect: " . mysql_error());
-    mysql_select_db($extraDb[3], $extraConnection) or die ("Cannot Connect to DB: " . mysql_error());
+    $extraConnection = mysql_connect($db_server, $db_user, $db_passwd, true) or die("Could not connect: " . mysql_error());
+    mysql_select_db($db_name, $extraConnection) or die ('Cannot Connect to DB: ' . mysql_error());
 
     // Has a trip been selected
     $trip = "";

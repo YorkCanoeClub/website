@@ -2,7 +2,13 @@
 if (!defined('SMF'))
 die('Hacking attempt...');
 
-require_once("/home/yorkcano/public_html/helper/functions.php");
+require_once(dirname(__FILE__) . '/../../Settings.php');
+
+global $db_persist, $db_connection, $db_server, $db_user, $db_passwd;
+global $db_type, $db_name, $ssi_db_user, $ssi_db_passwd, $sourcedir, $db_prefix;
+global $boarddir;
+
+require_once($boarddir."/helper/functions.php");
 
 function CommitteeWaiting() {
 
@@ -11,10 +17,8 @@ function CommitteeWaiting() {
     isAllowedTo(array('committee'));
     $manager = allowedTo('committee_manage');
     
-    $memberDB = array("localhost", "yorkcano_web", "web", "yorkcano_smf");
-
-    $memberConnection = mysql_connect($memberDB[0], $memberDB[1], $memberDB[2], true) or die("Could not connect: " . mysql_error());
-    mysql_select_db($memberDB[3], $memberConnection) or die ('Cannot Connect to DB: ' . mysql_error());
+    $memberConnection = mysql_connect($db_server, $db_user, $db_passwd, true) or die("Could not connect: " . mysql_error());
+    mysql_select_db($db_name, $memberConnection) or die ('Cannot Connect to DB: ' . mysql_error());
 
     $new = Array();
     
@@ -53,11 +57,9 @@ function CommitteeWaitingDetail() {
     isAllowedTo(array('committee'));
     $manager = allowedTo('committee_manage');
     
-    $memberDB = array("localhost", "yorkcano_web", "web", "yorkcano_smf");
+    $memberConnection = mysql_connect($db_server, $db_user, $db_passwd, true) or die("Could not connect: " . mysql_error());
+    mysql_select_db($db_name, $memberConnection) or die ('Cannot Connect to DB: ' . mysql_error());
 
-    $memberConnection = mysql_connect($memberDB[0], $memberDB[1], $memberDB[2], true) or die("Could not connect: " . mysql_error());
-    mysql_select_db($memberDB[3], $memberConnection) or die ('Cannot Connect to DB: ' . mysql_error());
-    
     $query = "select 
                 w.*,
                 m.*,
@@ -124,10 +126,8 @@ function CommitteeWaitingDetailSubmit() {
     isAllowedTo(array('committee'));
     $manager = allowedTo('committee_manage');
     
-    $memberDB = array("localhost", "yorkcano_web", "web", "yorkcano_smf");
-
-    $memberConnection = mysql_connect($memberDB[0], $memberDB[1], $memberDB[2], true) or die("Could not connect: " . mysql_error());
-    mysql_select_db($memberDB[3], $memberConnection) or die ('Cannot Connect to DB: ' . mysql_error());
+    $memberConnection = mysql_connect($db_server, $db_user, $db_passwd, true) or die("Could not connect: " . mysql_error());
+    mysql_select_db($db_name, $memberConnection) or die ('Cannot Connect to DB: ' . mysql_error());
 
     $memberQuery = "select * from smf_members where id_member = " . $context["user"]["id"];
     $memberResult = mysql_query($memberQuery, $memberConnection);
@@ -286,10 +286,8 @@ function CommitteeWaitingInvite() {
         array_push($membersIn, $_REQUEST["member" . $i]);
     }
     
-    $memberDB = array("localhost", "yorkcano_web", "web", "yorkcano_smf");
-
-    $memberConnection = mysql_connect($memberDB[0], $memberDB[1], $memberDB[2], true) or die("Could not connect: " . mysql_error());
-    mysql_select_db($memberDB[3], $memberConnection) or die ('Cannot Connect to DB: ' . mysql_error());
+    $memberConnection = mysql_connect($db_server, $db_user, $db_passwd, true) or die("Could not connect: " . mysql_error());
+    mysql_select_db($db_name, $memberConnection) or die ('Cannot Connect to DB: ' . mysql_error());
 
     $memberQuery = "select 
                     *
@@ -337,10 +335,8 @@ function CommitteeWaitingConfirm() {
         array_push($membersIn, $_REQUEST["member" . $i]);
     }
     
-    $memberDB = array("localhost", "yorkcano_web", "web", "yorkcano_smf");
-
-    $memberConnection = mysql_connect($memberDB[0], $memberDB[1], $memberDB[2], true) or die("Could not connect: " . mysql_error());
-    mysql_select_db($memberDB[3], $memberConnection) or die ('Cannot Connect to DB: ' . mysql_error());
+    $memberConnection = mysql_connect($db_server, $db_user, $db_passwd, true) or die("Could not connect: " . mysql_error());
+    mysql_select_db($db_name, $memberConnection) or die ('Cannot Connect to DB: ' . mysql_error());
 
     $memberQuery = "select 
                     *
