@@ -17,8 +17,8 @@ if ($context['user']['is_guest']) {
 
 } else {
 
-    $memberConnection = mysql_connect($db_server, $db_user, $db_passwd, true) or die("Could not connect: " . mysql_error());
-    mysql_select_db($db_name, $memberConnection) or die ('Cannot Connect to DB: ' . mysql_error());
+    $paymentConnection = mysql_connect($db_server, $db_user, $db_passwd, true) or die("Could not connect: " . mysql_error());
+    mysql_select_db($db_name, $paymentConnection) or die ('Cannot Connect to DB: ' . mysql_error());
 
     $paymentQuery = "select * from ycc_payments where paymentUser = '" . $context["user"]["username"] . "' and paymentStatus = 100";
     $result = mysql_query($paymentQuery, $paymentConnection);
