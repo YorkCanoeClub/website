@@ -11,6 +11,8 @@ function YCCMembershipDetail() {
     global $context;
     global $db_server, $db_name, $db_user, $db_passwd;
 
+    $context['page_title'] = "Your Membership Details";
+
     isAllowedTo(array('committee'));
     $manager = allowedTo('committee_manage');
     

@@ -11,6 +11,8 @@ function CommitteeWaiting() {
     global $context;
     global $db_server, $db_name, $db_user, $db_passwd;
 
+    $context['page_title'] = "Waiting List";
+
     isAllowedTo(array('committee'));
     $manager = allowedTo('committee_manage');
     
@@ -51,6 +53,8 @@ function CommitteeWaitingDetail() {
 
     global $context;
     global $db_server, $db_name, $db_user, $db_passwd;
+
+    $context['page_title'] = "Edit Waiting List Member";
 
     isAllowedTo(array('committee'));
     $manager = allowedTo('committee_manage');
@@ -120,6 +124,8 @@ function CommitteeWaitingDetailSubmit() {
 
     global $context;
     global $db_server, $db_name, $db_user, $db_passwd;
+
+    $context['page_title'] = "Waiting List Detail Submit";
 
     $errors = array();
     
@@ -278,6 +284,8 @@ function CommitteeWaitingInvite() {
 
     global $context;
     global $db_server, $db_name, $db_user, $db_passwd;
+
+    $context['page_title'] = "Committee Waiting List Invite";
 
     isAllowedTo(array('committee', 'committee_manage'));
     

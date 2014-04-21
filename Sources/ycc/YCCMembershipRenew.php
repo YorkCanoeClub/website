@@ -12,6 +12,8 @@ function YCCMembershipRenew() {
     global $context;
     global $db_server, $db_name, $db_user, $db_passwd;
 
+    $context['page_title'] = "Your Membership Renewal";
+
     isAllowedTo(array('view_ownylist'));
     
     $memberConnection = mysql_connect($db_server, $db_user, $db_passwd, true) or die("Could not connect: " . mysql_error());

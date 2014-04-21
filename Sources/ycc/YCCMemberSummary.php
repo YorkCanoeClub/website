@@ -11,6 +11,8 @@ function YCCMemberSummary() {
     global $context;
     global $db_server, $db_name, $db_user, $db_passwd;
 
+    $context['page_title'] = "YCC Membership Summary";
+
     isAllowedTo(array('committee'));
     $manager = allowedTo('committee_manage');
     

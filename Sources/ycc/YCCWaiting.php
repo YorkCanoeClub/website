@@ -11,6 +11,8 @@ function YCCWaiting() {
     global $context;
     global $db_server, $db_name, $db_user, $db_passwd;
 
+    $context['page_title'] = "Waiting List";
+
     isAllowedTo(array('view_ownylist', 'view_ylist', 'manage_ylist'));
     
     $memberConnection = mysql_connect($db_server, $db_user, $db_passwd, true) or die("Could not connect: " . mysql_error());

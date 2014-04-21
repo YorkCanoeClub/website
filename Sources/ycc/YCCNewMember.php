@@ -14,6 +14,8 @@ function YCCNewMember() {
     global $context;
     global $db_server, $db_name, $db_user, $db_passwd;
     
+    $context['page_title'] = "Join York Canoe Club";
+
     if (false && $context["user"]["username"] != "allarsj") {
         loadTemplate('ycc/YCCNewMemberOff');
         return;
