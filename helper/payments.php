@@ -22,10 +22,8 @@ if ($context['user']['is_guest']) {
 
     $paymentQuery = "select * from ycc_payments where paymentUser = '" . $context["user"]["username"] . "' and paymentStatus = 100";
     $result = mysql_query($paymentQuery, $paymentConnection);
-    
-    $paymentCount = mysql_num_rows($result);
-    
-    if ($paymentCount > 0) {
+
+    if ($result && mysql_num_rows($result) > 0) {
         
         while ($row = mysql_fetch_assoc($result)) {
 
