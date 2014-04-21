@@ -3,16 +3,13 @@ if (!defined('SMF'))
 die('Hacking attempt...');
 
 require_once(dirname(__FILE__) . '/../../Settings.php');
-
-global $db_persist, $db_connection, $db_server, $db_user, $db_passwd;
-global $db_type, $db_name, $ssi_db_user, $ssi_db_passwd, $sourcedir, $db_prefix;
 global $boarddir;
-
 require_once($boarddir."/helper/functions.php");
 
 function YCCMembershipDetail() {
 
     global $context;
+    global $db_server, $db_name, $db_user, $db_passwd;
 
     isAllowedTo(array('committee'));
     $manager = allowedTo('committee_manage');
@@ -108,6 +105,7 @@ function YCCMembershipDetail() {
 function YCCMembershipDetailSubmit() {
 
     global $context;
+    global $db_server, $db_name, $db_user, $db_passwd;
 
     isAllowedTo(array('view_ownylist', 'view_ylist', 'manage_ylist'));
     $manager = allowedTo('manage_ylist');

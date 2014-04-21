@@ -3,16 +3,13 @@ if (!defined('SMF'))
 die('Hacking attempt...');
 
 require_once(dirname(__FILE__) . '/../../Settings.php');
-
-global $db_persist, $db_connection, $db_server, $db_user, $db_passwd;
-global $db_type, $db_name, $ssi_db_user, $ssi_db_passwd, $sourcedir, $db_prefix;
 global $boarddir;
-
 require_once($boarddir."/helper/functions.php");
 
 function CommitteeWaiting() {
 
     global $context;
+    global $db_server, $db_name, $db_user, $db_passwd;
 
     isAllowedTo(array('committee'));
     $manager = allowedTo('committee_manage');
@@ -53,6 +50,7 @@ function CommitteeWaiting() {
 function CommitteeWaitingDetail() {
 
     global $context;
+    global $db_server, $db_name, $db_user, $db_passwd;
 
     isAllowedTo(array('committee'));
     $manager = allowedTo('committee_manage');
@@ -121,6 +119,8 @@ function CommitteeWaitingDetail() {
 function CommitteeWaitingDetailSubmit() {
 
     global $context;
+    global $db_server, $db_name, $db_user, $db_passwd;
+
     $errors = array();
     
     isAllowedTo(array('committee'));
@@ -277,6 +277,7 @@ function CommitteeWaitingDetailSubmit() {
 function CommitteeWaitingInvite() {
 
     global $context;
+    global $db_server, $db_name, $db_user, $db_passwd;
 
     isAllowedTo(array('committee', 'committee_manage'));
     
@@ -326,6 +327,7 @@ function CommitteeWaitingInvite() {
 function CommitteeWaitingConfirm() {
 
     global $context;
+    global $db_server, $db_name, $db_user, $db_passwd;
 
     isAllowedTo(array('committee', 'committee_manage'));
     
