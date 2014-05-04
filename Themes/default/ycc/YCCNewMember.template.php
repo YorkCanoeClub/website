@@ -18,25 +18,28 @@ function template_main() {
     ?>
 
 <h1>Joining York Canoe Club</h1>
-<p>Thank you for you interest in joining York Canoe Club. We are currently heavily oversubscribed and are running a waiting list for entry into the club. We hope that the wait will not be too long but please be aware that there is currently around a 9 month wait for the 'New Starters Program' and around a 3 month wait for experienced paddlers who don't have their own equipment. If you are an experienced paddler with your own equipment, that you can bring to every session, then the wait is normally very short.</p>
+<p>Thank you for you interest in joining York Canoe Club. For more information please email us and we can advise you on the best route into the club. Usually we will invite you down for a chat at our Wednesday club session.</p>
+<p>If you have experience and your own kit we can usually process your application quickly, and get you straight on the water with us. At the moment we have sufficient capacity to accept membership for paddlers with experience who need to borrow paddling kit.</p>
+<p>For those new to kayaking and canoeing we offer a "new starters programme". This introduces you to basic techniques and gets you started. We have a limit on the number of people we can accommodate on a new starters course, so there will be a wait of up to two months depending on the numbers on the waiting list and when you apply to join.</p>
 <h2>New Members</h2>
-<p>If you are not currently a member of York Canoe Club regardless of the amount of experience you have you'll need to put your name on our waiting list. If you are filling this form in for someone else please ensure you fill the form in with the details of the person who wishes to join rather than your own (that may sound like a silly request but you'd be surprised!). There are 2 ways to join the club and using the information you provide us we'll decide which way you should enter:</p>
+<p>If you wish to join fill out the online application form so we can process your application. If you are filling this form in for someone else please ensure you fill the form in with the details of the person who wishes to join rather than your own (that may sound like a silly request but you'd be surprised!).</p>
 <ul>
-    <li>New Starters Program - This is aimed at giving you a solid platform from which to develop your paddling skills within York Canoe Club. As the main focus of York Canoe Club is white water kayaking this is what the program is designed to prepare you for. Anyone with little or no experience will enter the club this way in addition to all under 18's (unless they hold BCU 3* white water).</li>
-    <li>Direct Entry - If you have experience of flatwater or white water kayaking you'll be able to enter the club directly. Generally we are looking for BCU 3* white water but understand that bits of paper aren't everyones bag so please give us as much detail as possible about what you have done in a kayak. If you own all your own kit and are able to bring it to sessions then this will speed up your entry into the club.</li>
+	<li><h3>Junior Members</h3><p>We offer junior membership from 11 years of age. Younger memberships can be arranged at the discretion of the committee, if a suitably experienced club member takes responsibility for the junior during club sessions.</p></li>
+	<li><h3>New Starters Programme</h3><p>This is aimed at giving you a solid platform from which to develop your paddling skills within York Canoe Club. As the main focus of York Canoe Club is white water kayaking this is what the program is designed to prepare you for.  Our coaching team will then help you progress and introduce you to the excitement of white water.</p></li>
+	<li><h3>Direct Entry</h3><p>If you have experience of flatwater or white water kayaking you'll be able to enter the club directly. If you feel you have sufficient experience to get straight on the water without basic training, contact us for a chat.</p>
 </ul>
 <?php if ($context['user']['is_guest']) { ?>
 <p>Please note that in order to join the waiting list you need to <a href="http://www.yorkcanoeclub.co.uk/index.php?action=register">register</a> and <a href="http://www.yorkcanoeclub.co.uk/index.php?action=login">login</a> to our club website. This is to ensure that we have a valid email address for you. All communication will be done using email and the club forum.</p>
 <?php } ?>
 
 <h2>Existing Members</h2>
-<p>If you are an existing member of York Canoe Club you are in the wrong place! You should be able to find your membership and renew it by clicking <a href="https://www.yorkcanoeclub.co.uk/index.php?action=ymembership">here</a>. If that isn't working out for you then please get in touch with a member of the committee or <a href="https://www.yorkcanoeclub.co.uk/index.php?action=pm;sa=send;u=2">PM Jon</a></p>
+<p>If you are an existing member of York Canoe Club you are in the wrong place! You should be able to find your membership and renew it by clicking <a href="https://www.yorkcanoeclub.co.uk/index.php?action=ymembership">here</a>. If that isn't working out for you then please get in touch with a member of the committee.</p>
 <?php if ($context['user']['is_guest']) { ?>
 <p>Please note that in order to manage your membership you need to <a href="http://www.yorkcanoeclub.co.uk/index.php?action=register">register</a> and <a href="http://www.yorkcanoeclub.co.uk/index.php?action=login">login</a> to our club website. This is to ensure that we have a valid email address for you. All communication will be done using email and the club forum.</p>
 <?php } ?>
 
 <h2>Membership Rates</h2>
-<p>Membership rates for the season October 2012 - September 2013, as set at the AGM in November 2011 are:</p>
+<p>Membership rates for the season October 2013 - September 2014 are:</p>
 <ul>
     <li>Adult - &pound;40</li>
     <li>Adult BCU Member - &pound;39</li>
