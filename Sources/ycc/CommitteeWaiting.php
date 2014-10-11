@@ -30,6 +30,7 @@ function CommitteeWaiting() {
                 from ycc_waiting as w 
                 left join smf_members as m
                 on w.forumid = m.id_member
+		where w.deleteFlag=0
               order by w.membershipStatus, w.createdDate";
     $result = mysql_query($query, $memberConnection);
     
@@ -71,7 +72,8 @@ function CommitteeWaitingDetail() {
                 from ycc_waiting as w 
                 left join smf_members as m
                 on w.forumid = m.id_member
-              where w.membershipNumber = " . $_REQUEST["membershipNumber"];
+              where w.membershipNumber = " . $_REQUEST["membershipNumber"] . "
+		and w.deleteFlag=0";
     $result = mysql_query($query, $memberConnection);
     
     if ($row = mysql_fetch_assoc($result)) {
@@ -87,6 +89,7 @@ function CommitteeWaitingDetail() {
                    on forum.id_member = members.forumId
                    where members.membershipNumber is null
                    or members.forumId = " . $row["forumId"] . "
+                   and deleteFlag=0
                    order by real_name";
         $resultA = mysql_query($queryA, $memberConnection);
 

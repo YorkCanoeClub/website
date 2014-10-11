@@ -32,6 +32,7 @@ function YCCWaiting() {
                 left join smf_members as m
                 on w.forumid = m.id_member
               where w.membershipStatus = 'W100'
+              and w.deleteFlag=0
               order by w.membershipStatus desc, w.createdDate";
     $result = mysql_query($query, $memberConnection);
     
@@ -50,9 +51,8 @@ function YCCWaiting() {
                 from ycc_waiting as w 
                 left join smf_members as m
                 on w.forumid = m.id_member
-              where w.membershipStatus = 'W200'
-              or w.membershipStatus = 'W201'
-              or w.membershipStatus = 'W202'
+              where w.membershipStatus IN ('W200', 'W201', 'W202')
+              and w.deleteFlag=0
               order by w.membershipStatus desc, w.createdDate";
     $result2 = mysql_query($query2, $memberConnection);
     
@@ -71,13 +71,8 @@ function YCCWaiting() {
                 from ycc_waiting as w 
                 left join smf_members as m
                 on w.forumid = m.id_member
-              where w.membershipStatus = 'W300'
-              or w.membershipStatus = 'W301'
-              or w.membershipStatus = 'W350'
-              or w.membershipStatus = 'W351'
-              or w.membershipStatus = 'W400'
-              or w.membershipStatus = 'W401'
-              or w.membershipStatus = 'W299'
+              where w.membershipStatus IN ('W300', 'W301', 'W350', 'W351', 'W400', 'W401', 'W299')
+              and w.deleteFlag=0
               order by w.membershipStatus desc, w.createdDate";
     $result3 = mysql_query($query3, $memberConnection);
     
