@@ -1,0 +1,204 @@
+// Layout: Content-Sidebar
+@if $layout == content-sidebar {
+
+	.blog, .error404, .search-results, .archive {
+		.site-main {
+			article {
+				margin-bottom: 60px;
+			}
+		}
+	}
+
+	.site-main {
+		background: $site-main-background;
+
+	    .small-index-thumbnail {
+			padding: 4rem 4rem 0;
+			@media screen and (max-width: $break-small) {
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+	    }
+
+	    .entry-content {
+	    	.search-form {
+	    		.search-field {
+	    			box-sizing: border-box;
+	    			width: 100%
+	    		}
+	    	}
+
+		    p {
+		    	margin-bottom: 50px;
+		    }
+
+	    	blockquote p {
+	    		margin-bottom: 0;
+	    	}
+		}
+		
+		blockquote.alignleft {
+			border: none;
+			@media screen and (min-width: 1320px) {
+		    	padding-left: 2em;
+			}
+		}
+
+		blockquote.alignright {
+		    border: none;
+		    @media screen and (min-width: 1820px) {
+		    	padding-right: 2em;
+			}
+		}
+
+		.index-page-header {
+		    margin-bottom: 0;
+		}
+	}
+
+	.site-content {
+		background: $site-main-background;
+		box-shadow: 0 0 5px 0px rgba( 0, 0, 0, .2 );
+
+		.widget-area { /* Sidebar 1 */
+			width: 342px;
+			float: right;
+			padding: 4rem;
+			background: $widget-area-background;
+			@media screen and (max-width: $break-med - 1) {
+				width: auto;
+				max-width: $widget-area-tablet-width;
+				float: none;
+				margin: 1em auto 0 auto;
+			}
+			@media screen and (min-width: 1200px) {
+				padding-top: 60px;
+			}
+			@media screen and (min-width: 1300px) {
+				padding-top: 80px;
+			}
+		}
+	}
+
+    .entry-header,
+    .entry-content,
+    .entry-footer,
+    .tag-links,
+    .post-navigation,
+    .comments-area,
+    .paging-navigation,
+    .index-box {
+    	position: relative;
+	    max-width: 800px;
+	    max-width: 80rem;
+	    padding: 0 4rem;
+	    margin: 0 auto;
+    	@media screen and (min-width: 1225px) {
+        	max-width: 83rem;
+    	}
+    	@media screen and (min-width: 1250px) {
+        	max-width: 86rem;
+    	}
+    	@media screen and (max-width: $break-small) {
+    		padding-left: 1rem;
+    		padding-right: 1rem;
+    	}
+    }
+
+    .entry-meta {
+    	position: relative;
+	    max-width: 780px;
+	    max-width: 78rem;
+	    margin: 0 auto;
+	    color: $text-color-light;
+	    font-weight: 300;
+		font-size: 14px;
+		@media screen and (max-width: 400px) {
+			font-size: 12px;
+		}
+	    a {
+	    	color: $text-color-light;
+	    }
+    }
+	    
+	.content-area {
+		@media screen and (min-width: $break-large) {
+		    width: 100%;
+			float: left;
+			margin-left: -342px;
+			padding-left: 342px;
+			padding-bottom: 4em;
+		}
+		@media screen and (min-width: $break-med) and (max-width: $break-large - 1) {
+			width: 100%;
+	        float: left;
+	        margin-left: -342px;
+	        padding-left: 342px;
+	        padding-top: 0;
+	        padding-bottom: 4em;
+		}
+
+		@media screen and (min-width: 1200px) {
+			padding-top: 20px;
+		}
+		@media screen and (min-width: 1300px) {
+			padding-top: 40px;
+		}
+	}
+
+	.site-footer {
+	    clear: both;
+	    width: 100%;
+	}
+}
+
+// Layout: Sidebar-Content
+@else if $layout == sidebar-content {
+	.content-area {
+		float: right;
+		margin: 0 0 0 -25%;
+		width: 100%;
+	}
+	.site-main {
+		margin: 0 0 0 25%;
+	}
+	.site-content .widget-area { /* Sidebar 1 */
+		float: left;
+		overflow: hidden;
+		width: 25%;
+	}
+}
+
+@else if $layout == no-sidebar {
+	.site-content {
+		margin-top: 250px;
+		background: $site-main-background;
+	}
+
+    .entry-header,
+    .entry-content,
+    .entry-footer,
+    .tag-links,
+    .post-navigation,
+    .comments-area,
+    .paging-navigation,
+    .index-box {
+    	position: relative;
+	    max-width: 780px;
+	    max-width: 78rem;
+	    padding: 0 4rem;
+	    margin: 0 auto;
+    }
+
+	.site-footer {
+	    clear: both;
+	    width: 100%;
+	}
+}
+
+@if $layout != null {
+	.site-footer {
+		clear: both;
+		width: 100%;
+	}
+}

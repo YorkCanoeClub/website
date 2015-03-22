@@ -1,0 +1,247 @@
+/* =Widgets
+----------------------------------------------- */
+
+.widget {
+	margin: 0 0 $vspacing;
+	font-family: $widget-font;
+	font-size: 15px;
+	font-size: 1.5rem;
+
+	/* Make sure select elements fit in widgets */
+	select {
+		max-width: 100%;
+	}
+
+	a {
+	    font-weight: 300;
+	    text-decoration: none;
+	    &:hover {
+	    	text-decoration: underline;
+	    }
+	}
+
+	p {
+		font-weight: 300;
+	}
+
+	ul, ol {
+	    padding: 0;
+	    margin: -1em 0 0;
+	    list-style-type: none;
+	}
+
+	li {
+		padding: 0.5em 0 0;
+	}
+
+	li ul, li ol {
+		margin-top: 0;
+	}
+
+	li li {
+		margin-left: 1.5em;
+	}
+}
+
+/* Search widget */
+.widget_search {
+	.search-field {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0.5rem 1rem;
+		font-size: 19px;
+		font-size: 1.9rem;
+		font-weight: 300;
+		color: $text-area-text;
+	}
+	.search-submit {
+		display: none;
+	}
+}
+
+.widget-title {
+    margin-bottom: 1em;
+    font-size: 23px;
+    font-size: 2.3rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    border-top: 1px solid $widget-title-horizontal-line;
+}
+
+.widget_recent_entries li:before,
+.widget_recent_comments li:before,
+.widget_archive li:before {
+    display: block;
+    float: left;
+    padding-top: 2px;
+    margin-left: -2.5em;
+    font-family: 'fontawesome';
+    font-size: 14px;
+    font-size: 1.375rem;
+} 
+
+.widget_recent_comments li {
+	margin: 0 0 .5em 2.4em;
+	&:before {
+		content: "\f075";
+	}
+}
+.widget_recent_entries li {
+	margin: 0 0 .5em 2.4em;
+	&:before {
+		content: "\f036";
+	}
+}
+.widget_archive li {
+	margin: 0 0 0 2.3em;
+	
+	&:before {
+		content: "\f187";
+	}
+}
+
+.widget_nav_menu,
+.widget_pages {
+
+	li {
+		padding-top: 0;
+	}
+
+	a {
+	    display: block;
+	    padding: 0.75em 0;
+	    border-bottom: solid 1px #e5e5e5;
+	    border-bottom: solid 1px $sidebar-widgets-horizontal-line;
+	}
+}
+
+.widget_rss {
+	li {
+		margin-bottom: .5em;
+	}
+
+	.rss-date, cite {
+	    display: block;
+	    font-size: 85%;
+	    color: $widget-light-text;
+	    font-weight: 300;
+	    font-style: italic;
+	}
+}
+
+.widget_calendar {
+	table, th, td {
+		border: none;
+		text-align: center;
+	}
+	caption {
+		padding-bottom: 8px;
+		border-bottom: 1px solid $horizontal-line;
+		text-align: center;
+	}
+	thead th {
+		border-bottom: 1px solid $horizontal-line;
+	}
+	tfoot{
+		td {
+			border-top: 1px solid $horizontal-line;
+			padding-top: 8px;
+		}
+		#prev {
+			text-align: left;
+		}
+		#next {
+			text-align: right;
+		}
+	}
+}
+
+// Forms in widget areas
+.widget-area {
+	input[type="text"] {
+		width: 100%;
+	}
+	input[type="submit"] {
+		margin-top: 5px;
+		padding: 0.55em 1em;
+		width: 100%;
+	}
+}
+
+/*
+ *	Footer widgets
+ */
+.footer-widgets {
+	margin: 0 auto;
+	max-width: 955px;
+
+	.widget {
+	    float: left;
+	    width: 29.33333333%;
+	    margin: 0 2% 3rem;
+
+	    @media screen and ( max-width: 767px ) {
+	    	float: none;
+	        width: 100%;
+	        margin: 0 0 6rem;
+	    }
+	}
+
+	.widget-title {
+		color: $footer-text;
+		border-top-color: #666;
+		border-top-color: $footer-widget-title-horizontal-line;
+	}
+
+	.widget_nav_menu a,
+	.widget_pages a {
+			border-bottom-color: #666;
+			border-bottom-color: $footer-widgets-horizontal-line;
+	}
+
+	.wp-caption .wp-caption-text {
+		border-left-color: #666;
+		border-bottom-color: #666;
+		border-right-color: #666;
+		border-left-color: $footer-widgets-horizontal-line;
+		border-bottom-color: $footer-widgets-horizontal-line;
+		border-right-color: $footer-widgets-horizontal-line;
+	}
+
+	.widget_calendar {
+		caption {
+			border-bottom: 1px solid $footer-widgets-horizontal-line;
+		}
+		thead th {
+			border-bottom: 1px solid $footer-widgets-horizontal-line;
+		}
+		tfoot{
+			td {
+				border-top: 1px solid $footer-widgets-horizontal-line;
+			}
+		}
+	}
+
+	input[type="text"] {
+		border-color: #fff;
+	}
+
+	input[type="submit"] {
+		color: #777;
+		border-color: #777;
+		&:hover {
+			color: #fff;
+			border-color: #fff;
+		}
+	}
+}
+
+// @media of max-width 1044, .footer-widgets .widget { width = 226px }
+// THB One does this at 990px
+
+
+
+/* Footer widgets responsive */
+@media screen and (max-width: 797px) {
+    #footer-widgets { width: 100%!important; }
+}

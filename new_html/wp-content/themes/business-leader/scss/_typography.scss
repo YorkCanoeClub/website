@@ -1,0 +1,207 @@
+body,
+button,
+input,
+select,
+textarea {
+	font-family: $base-font;
+	color: $text-color;
+	font-size: 20px;
+	font-size: 2rem;
+	line-height: 1.5;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+::selection {
+	background: $highlighted-text-color;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	font-family: $header-font;
+	color: $header-background;
+	font-weight: 700;
+	clear: both;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: $vspacing;
+}
+
+/* Text elements */
+p {
+	margin-bottom: $vspacing;
+}
+ul, ol {
+	margin: 0 0 $vspacing 3em;
+}
+ul {
+	list-style: disc;
+}
+ol {
+	list-style: decimal;
+}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: $vspacing;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 $vspacing $vspacing;
+	font-weight: 300;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+    padding: 1em 1.5em 1em 3.5em;
+    margin-bottom: $vspacing;
+    font-style: italic;
+    p {
+    	margin: 0;
+    	border-left: 5px solid $blockquote-border;
+    	padding-left: 1.5em;
+    	position: relative;
+    	&:after {
+    		font-family: 'fontawesome';
+    		content: "\f10d";
+    		display: block;
+		    float: right;
+		    position: absolute;
+		    top: 0;
+		    left: -2.7em;
+		    font-size: 25px;
+		    font-size: 2.5rem;
+    	}
+    }
+    em { 
+	    font-style: normal; 
+	}
+	cite {
+	    display: block;
+	    margin-top: 1em;
+	    margin-left: 40%;
+	    font-size: 16px;
+	    font-size: 1.6rem;
+	    font-family: $base-font;
+	    font-style: normal;
+	    line-height: 1.5em;
+	    text-align: right;
+	}
+	&.alignleft {
+	    width: 50%;
+	    float: left;
+	    padding: 1em 0 0;
+	    margin-right: 2em;
+	    @media screen and (max-width: 780px) {
+			width: 40%;
+		}
+		@media screen and (max-width:600px) {
+		        width: 100%;
+		        padding: 1em 1.5em 0;   
+		}
+	}
+	&.alignright {
+	    width: 50%;
+	    float: right;
+	    padding: 1em 0 0;
+	    margin-left: 2em;
+	    @media screen and (max-width: 780px) {
+			width: 40%;
+		}
+		@media screen and (max-width:600px) {
+		        width: 100%;
+		        padding: 1em 1.5em 0;   
+		}
+	}
+}
+address {
+	margin: 0 0 $vspacing;
+	font-weight: 300;
+}
+pre {
+	background: #eee;
+	@include border-radius( 4px );
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 $vspacing;
+	width: 100%;
+	border: 1px solid $table-cells;
+}
+th {
+	font-weight: 400;
+	background-color: $table-cell-bg;
+}
+th, td {
+	padding: 3px;
+	border: 1px solid $table-cells;
+}
+caption, td {
+	font-weight: 300;
+}
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+/* Links */
+a {
+	color: $link-color;
+	
+	@include hoverActiveFocus {
+		color: darken($link-color, 30%);
+	}
+
+	&:visited {
+		color: $link-visited;
+	}
+}

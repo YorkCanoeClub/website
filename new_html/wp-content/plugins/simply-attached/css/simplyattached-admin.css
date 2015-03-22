@@ -1,0 +1,140 @@
+/* ============ */
+/* = META BOX = */
+/* ============ */
+
+.simplyattached-inner { padding-top:3px; }
+/* see http://downloads.sixrevisions.com/css-tooltips/index.html */
+.sa-tooltip {
+			border-bottom: 1px dotted #000000; color: #000000; outline: none;
+			cursor: help; text-decoration: none;
+			position: relative;
+		}
+.sa-tooltip:hover {
+			text-decoration: none;
+			color: #000000;
+		}
+.sa-tooltip span {
+			margin-left: -999em;
+			position: absolute;
+		}
+.sa-tooltip:hover span {
+			border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+			font-family: Calibri, Tahoma, Geneva, sans-serif;
+			position: absolute; left: 1em; top: 2em; z-index: 99;
+			margin-left: 0; width: 250px;
+		}
+.sa-tooltip:hover img {
+			border: 0; margin: -10px 0 0 -55px;
+			float: left; position: absolute;
+		}
+.sa-tooltip:hover em {
+			font-family: Candara, Tahoma, Geneva, sans-serif; font-size: 1.2em; font-weight: bold;
+			display: block; padding: 0.2em 0 0.6em 0;
+		}
+	.classic { padding: 0.8em 1em; }
+	.custom { padding: 0.5em 0.8em 0.8em 2em; }
+	 * html a:hover { background: transparent; }
+	.classic {background: #FFFFAA; border: 1px solid #FFAD33; }
+	.critical { background: #FFCCAA; border: 1px solid #FF3334;	}
+	.help { background: #9FDAEE; border: 1px solid #2BB0D7;	}
+	.info { background: #9FDAEE; border: 1px solid #2BB0D7;	}
+	.warning { background: #FFFFAA; border: 1px solid #FFAD33; }
+
+#simplyattached-actions { overflow:hidden; zoom:1;}
+.simplyattached-actions-button { padding-bottom: 5px; display: inline-block; vertical-align: middle; width: 160px }
+.simplyattached-actions-label { display: inline-block; }
+
+li#simplyattached-add-new { float:right; text-align:right; }
+
+#simplyattached-instructions { background:#fff; margin:0; padding:12px 0 !important; }
+
+#simplyattached-file-list { padding:0; background:#fff; }
+.simplyattached-file-section { padding:0 0 20px 0; }
+
+#simplyattached-file-details .attachments img { display:block; }
+#simplyattached-file-details .attachments a { display:block; border:3px solid #fff; float:left; }
+#simplyattached-file-details .attachments a:hover { border:3px solid #ccc; }
+
+#simplyattached-file-details .attachments a.attachments-selected { border:3px solid #eb3525; }
+
+	/* File listings, not images */
+	#simplyattached-file-details .attachments-alt li { width:290px; }
+	#simplyattached-file-details .attachments-alt span.attachments-thumbnail { display:block; width:70px; float:left; }
+	#simplyattached-file-details .attachments-alt h2.attachments-title-display { display:block; width:220px; float:left; text-decoration:none; font:20px Georgia,"Times New Roman","Bitstream Charter",Times,serif; font-style:italic; font-weight:normal; height:2.4em; overflow:hidden; }
+	
+	#simplyattached-file-details .attachments-alt li a { display:block; border:0; text-decoration:none; }
+	#simplyattached-file-details .attachments-alt li a.attachments-selected { border:0; }
+	#simplyattached-file-details .attachments-alt li a span.attachments-thumbnail img { border:3px solid #fff; }
+	#simplyattached-file-details .attachments-alt li a.attachments-selected span.attachments-thumbnail img { border:3px solid #eb3525; }
+
+
+/* ========================= */
+/* = farbtastic box position */
+/* ========================= */
+.simplyattached-inner  #farbtasticpicker {}
+
+/* ========================= */
+/* = META BOX FILE LISTING = */
+/* ========================= */
+#simplyattached-list ul { padding:10px 0; }
+#simplyattached-list li.simplyattached-file { overflow:hidden; zoom:1; background:#fff; }
+#simplyattached-list li.placeHolder div { background-color:white !important; border:dashed 1px gray !important; }
+
+.attachments-data { display:none; }
+
+#poststuff li.simplyattached-file { height:115px; }
+#poststuff li.simplyattached-file h2 { margin:0; overflow:hidden; zoom:1; }
+#poststuff li.simplyattached-file h2 a { text-decoration:none; color:inherit; }
+#poststuff li.simplyattached-file h2 span { display:block; float:left; }
+#poststuff li.simplyattached-file h2 span.attachment-handle-icon { padding:3px 0 0 0; cursor:move; }
+#poststuff li.simplyattached-file h2 a span.attachment-handle-icon { padding:3px 0 0 0; cursor:move; }
+#poststuff li.simplyattached-file h2 span.attachment-name { display: inline-block; vertical-align:top; padding:0 10px; height:2em; overflow:hidden; width:60%; }
+#poststuff li.simplyattached-file h2 span.attachment-name img.attachment-name-logo { display: inline-block; vertical-align:middle; padding:0; height:25px; width:auto; }
+#poststuff li.simplyattached-file h2 span.attachment-delete { width:80px; text-align:center; padding:0.7em 0 0 0; float:right; margin-right:3px; }
+#poststuff li.simplyattached-file h2 span.attachment-delete a { font:11px "Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif; color:#21759b; text-decoration:underline; }
+#poststuff li.simplyattached-file h2 span.attachment-delete a:hover { color:#d54e21; }
+
+#simplyattached-list .simplyattached-file { overflow:hidden; zoom:1; }
+#simplyattached-list .simplyattached-fields { width:80%; float:left; }
+#simplyattached-list .attachment-thumbnail { width:80px; float:right; margin-right:3px; }
+#simplyattached-list .attachment-thumbnail { width:80px; float:right; text-align:right; }
+#simplyattached-list .attachment-thumbnail img { display:block; max-width:80px; margin:0 auto; }
+
+.simplyattached-fields .textfield { overflow:hidden; zoom:1; padding-bottom:10px; }
+.simplyattached-fields .textfield label { display:block; width:20%; float:left; padding-top:6px; }
+.simplyattached-fields .textfield input { display:block; width:75%; float:left; }
+
+
+/* =========== */
+/* = OPTIONS = */
+/* =========== */
+.simplyattached_checkbox { overflow:hidden; zoom:1; padding:0 0 7px 0; }
+.simplyattached_checkbox input { display:block; float:left; margin-top:2px; }
+.simplyattached_checkbox label { display:block; float:left; padding:0 0 0 7px; }
+
+#simplyattached-tabs .subsubsub { float:left; }
+#simplyattached-tabs .subsubsub a { color:#21759b !important; }
+#simplyattached-tabs-wrapper { border-bottom:1px solid #dfdfdf; position:relative; }
+#simplyattached-tabs #sidemenu { overflow:hidden; zoom:1; background:#f9f9f9; float:none !important; margin:0; }
+#simplyattached-live-filter { display:block; width:140px; float:left; margin:0 0 10px; }
+
+/* Hide WP UI elements only for Attachments */
+body#media-upload.simplyattached-media-upload #tab-type_url,
+body#media-upload.simplyattached-media-upload #tab-nextgen,
+body#media-upload.simplyattached-media-upload p.ml-submit,
+body#media-upload.simplyattached-media-upload p.savebutton.ml-submit,
+body#media-upload.simplyattached-media-upload div.media-item tr.url,
+body#media-upload.simplyattached-media-upload div.media-item tr.align,
+body#media-upload.simplyattached-media-upload div.media-item tr.image-size,
+body#media-upload.simplyattached-media-upload div.media-item tr.image_alt,
+body#media-upload.simplyattached-media-upload div.media-item tr.post_content,
+body#media-upload.simplyattached-media-upload div.media-item a.del-link { display:none !important; }
+
+/* =========================== */
+/* = Options page info boxes = */
+/* =========================== */
+
+#simplyattached-info {float:right; margin: 0px 10px 10px 10px }
+#simplyattached-info  .simplyattached-info-box { width:255px; padding: 2px; background-color: #ffffff; border: 1px solid #c0c0c0; text-align: center; }
+#simplyattached-info .simplyattached-info-space { width:255px; padding: 2px; }

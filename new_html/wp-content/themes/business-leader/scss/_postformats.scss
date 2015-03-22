@@ -1,0 +1,27 @@
+/* =Asides
+----------------------------------------------- */
+
+.blog, .archive, .error404, .search {
+	.format-aside {
+		.entry-title {
+			display: none;
+		}
+		.entry-content {
+		    padding-top: 4rem;
+		    p {
+		    	margin-bottom: 25px;
+		    }
+		}
+		.entry-meta {
+			padding: 0 4rem;
+			
+			@media screen and (max-width: $break-small) {
+				padding: 0 1rem;
+			}
+
+			a:hover {
+				color: $link-color;
+			}
+		}
+	}
+}
